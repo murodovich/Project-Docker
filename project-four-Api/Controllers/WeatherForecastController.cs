@@ -6,7 +6,7 @@ using project_four_Infrastructure;
 namespace project_four_Api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

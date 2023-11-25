@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Project_one_Application;
 using Project_two_Application;
 using project_two_Domain;
 using project_two_Infrastructure;
@@ -7,7 +6,7 @@ using project_two_Infrastructure;
 namespace Project_two.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
