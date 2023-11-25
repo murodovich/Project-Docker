@@ -9,6 +9,10 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Project-two/Project-two.csproj", "Project-two/"]
+COPY ["Project-one-Application/Project-one-Application.csproj", "Project-one-Application/"]
+COPY ["Project-two-Application/Project-two-Application.csproj", "Project-two-Application/"]
+COPY ["project-two-Domain/project-two-Domain.csproj", "project-two-Domain/"]
+COPY ["project-two-Infrastructure/project-two-Infrastructure.csproj", "project-two-Infrastructure/"]
 RUN dotnet restore "./Project-two/./Project-two.csproj"
 COPY . .
 WORKDIR "/src/Project-two"
