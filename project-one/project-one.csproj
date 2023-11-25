@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>project_one</RootNamespace>
+    <UserSecretsId>5b973a10-a8b6-4261-84b5-3706bd261210</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\project-four-Application\project-four-Application.csproj" />
+    <ProjectReference Include="..\project-four-Domain\project-four-Domain.csproj" />
+    <ProjectReference Include="..\project-four-Infrastructure\project-four-Infrastructure.csproj" />
+    <ProjectReference Include="..\Project-one-Application\Project-one-Application.csproj" />
+    <ProjectReference Include="..\Project-one-Domain\Project-one-Domain.csproj" />
+    <ProjectReference Include="..\Project-one-Infrastructure\Project-one-Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
