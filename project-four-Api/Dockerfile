@@ -9,6 +9,9 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["project-four-Api/project-four-Api.csproj", "project-four-Api/"]
+COPY ["project-four-Application/project-four-Application.csproj", "project-four-Application/"]
+COPY ["project-four-Domain/project-four-Domain.csproj", "project-four-Domain/"]
+COPY ["project-four-Infrastructure/project-four-Infrastructure.csproj", "project-four-Infrastructure/"]
 RUN dotnet restore "./project-four-Api/./project-four-Api.csproj"
 COPY . .
 WORKDIR "/src/project-four-Api"
